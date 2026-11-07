@@ -13,3 +13,68 @@
 .footer{background:#111426;color:#858ba2;padding:23px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;font-size:10px}.footer .brand{color:white;font-size:12px}.footer .brand-mark{background:#292d49}.footer-inner>span{font-size:10px}
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:55px;padding-top:75px}.hero-copy{max-width:720px}.hero-art{max-width:600px;width:100%;margin:auto}.about-grid{gap:45px}.section-heading-row{align-items:start;flex-direction:column;gap:18px}.heading-note{max-width:550px}.service-grid{grid-template-columns:repeat(2,1fr)}.education-grid{gap:35px}}
 @media(max-width:650px){.container{width:min(100% - 36px,520px)}.site-header{height:70px}.menu-toggle{display:flex;flex-direction:column;gap:5px;padding:10px}.menu-toggle span{display:block;width:22px;height:2px;background:var(--ink)}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;padding:22px 24px 25px;background:white;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:20px}.nav-links.open{display:flex}.nav-cta{text-align:center}.hero{padding:68px 0 65px;min-height:auto}.eyebrow{font-size:8px;letter-spacing:1.5px}h1{font-size:43px;letter-spacing:-1.5px}.hero-lead{font-size:15px}.hero-proof{gap:17px;justify-content:space-between;margin-top:38px}.hero-proof strong{font-size:11px}.hero-proof span{font-size:9px}.hero-art{height:350px;border-radius:20px}.hero-art:before{width:390px;height:390px}.hero-art:after{width:290px;height:290px}.art-core{width:135px;height:135px}.core-symbol{font-size:38px}.node{width:67px;height:67px;border-radius:15px}.node-a{left:28px;top:45px}.node-b{right:28px;top:48px}.node-c{left:28px;bottom:53px}.node-d{right:28px;bottom:48px}.node b{font-size:16px}.ticker-track{justify-content:flex-start;gap:23px;font-size:8px}.section{padding-top:78px;padding-bottom:78px}.about-grid{grid-template-columns:1fr;gap:25px;margin-top:28px}.about-grid h2,.section-heading-row h2,.education-grid h2{font-size:36px}.about-copy .large-copy{font-size:17px}.journey-strip{grid-template-columns:1fr;margin-top:40px}.journey-strip>div,.journey-strip>div+div{padding:20px 0;border-left:0;border-top:1px solid var(--line)}.journey-strip>div:first-child{border-top:0}.services-section,.work-section{padding:78px 0}.service-grid,.work-grid,.expertise-grid{grid-template-columns:1fr}.service-card{min-height:0}.service-card p{min-height:0}.expertise-panel{padding:25px 20px}.skill-row{font-size:11px}.skill-state{font-size:9px;text-align:right}.work-visual{height:190px}.education-section{padding:78px 0}.education-grid{grid-template-columns:1fr;gap:28px}.education-card{padding:22px 17px}.education-card h3{font-size:19px}.contact-section{padding:78px 0}.contact-email{font-size:17px}.footer-inner{gap:15px;flex-wrap:wrap}.footer-inner p{order:3;width:100%}}
+
+
+/* === Portfolio refinement: clearer type, refined motion, and accessibility === */
+html { scroll-behavior: smooth; }
+body { font-size: 16px; }
+.hero-name { font: 800 clamp(58px, 7.4vw, 94px)/1.02 Manrope, sans-serif; letter-spacing: -4px; margin: 22px 0 10px; color: var(--ink); }
+.name-period { color: var(--violet); }
+.hero-role { font: 700 clamp(15px, 1.6vw, 19px)/1.5 Manrope, sans-serif; color: #666b83; margin: 0 0 24px; }
+.hero-role span { color: var(--violet); padding: 0 5px; }
+.hero-statement { font: 800 clamp(32px, 4.2vw, 52px)/1.12 Manrope, sans-serif; letter-spacing: -2px; max-width: 690px; margin: 0 0 20px; }
+.hero-lead { font-size: clamp(16px, 1.35vw, 18px); line-height: 1.8; }
+.eyebrow { font-size: 11px; }
+.nav-links a { font-size: 14px; }
+.section-label { font-size: 11px; letter-spacing: 1.8px; }
+.section-kicker { font-size: 13px; }
+.about-copy p { font-size: 16px; line-height: 1.85; }
+.about-copy .large-copy { font-size: clamp(19px, 2vw, 23px); line-height: 1.65; }
+.journey-strip strong { font-size: 19px; }
+.journey-strip p, .heading-note { font-size: 15px; line-height: 1.8; }
+.service-card h3 { font-size: 22px; }
+.service-card p { font-size: 15px; line-height: 1.8; }
+.service-card li { font-size: 14px; }
+.service-tag, .service-note { font-size: 11px; }
+.expertise-panel h3 { font-size: 25px; }
+.skill-row { font-size: 15px; }
+.skill-state { font-size: 13px; }
+.work-info h3 { font-size: 21px; }
+.work-info p { font-size: 15px; line-height: 1.8; }
+.work-info>span { font-size: 10px; }
+.contact-intro { font-size: 16px; line-height: 1.85; }
+.social-links { font-size: 14px; }
+.footer-inner { font-size: 12px; }
+
+/* Scroll reveal: elements appear gently as they enter the viewport. */
+.js-reveal { opacity: 0; transform: translateY(26px); transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1); }
+.js-reveal.is-visible { opacity: 1; transform: translateY(0); }
+.hero-copy { animation: heroEnter .9s ease both; }
+.hero-art { animation: artEnter 1.1s .12s ease both; }
+.art-core { animation: corePulse 5s ease-in-out infinite; }
+.art-orbit { animation: orbitSpin 28s linear infinite; }
+.node { transition: transform .35s ease, box-shadow .35s ease; }
+.node:hover { transform: translateY(-7px) scale(1.06); box-shadow: 0 15px 36px rgba(109,91,220,.2); }
+.service-card, .work-card, .expertise-panel, .journey-strip>div { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+.service-card:hover, .work-card:hover, .expertise-panel:hover { transform: translateY(-7px); box-shadow: 0 18px 42px rgba(22,27,55,.12); }
+.button { transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+.button:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(93,78,190,.2); }
+.ticker-track { animation: tickerMove 32s linear infinite; }
+@keyframes heroEnter { from {opacity:0; transform:translateY(22px)} to {opacity:1; transform:translateY(0)} }
+@keyframes artEnter { from {opacity:0; transform:translateY(28px) scale(.97)} to {opacity:1; transform:translateY(0) scale(1)} }
+@keyframes orbitSpin { to {transform:rotate(360deg)} }
+@keyframes corePulse { 0%,100% {transform:scale(1)} 50% {transform:scale(1.045)} }
+@keyframes tickerMove { from {transform:translateX(0)} to {transform:translateX(-18%)} }
+@media (max-width:650px) {
+  .hero-name { font-size: clamp(52px, 14vw, 72px); letter-spacing: -2.8px; }
+  .hero-statement { font-size: 34px; letter-spacing: -1.4px; }
+  .hero-role { font-size: 15px; }
+  .about-copy p, .service-card p, .work-info p, .contact-intro { font-size: 15px; }
+  .skill-row { font-size: 13px; }
+  .skill-state { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .js-reveal { opacity: 1; transform: none; }
+}
