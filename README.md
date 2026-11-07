@@ -1,24 +1,7 @@
-# Zahra Batool — AI & Digital Solutions
+# Zahra Batool | Portfolio
 
-A fresh React portfolio inspired by the clean, editorial design reference provided by Zahra.
+Personal portfolio website: AI, technology, WordPress development, social media marketing and SEO.
 
-## Stack
-- React
-- Vite
-- Framer Motion (fade and reveal transitions)
-- Lucide React icons
-- CSS animated network graphic (no stock or childish imagery)
+Static site (HTML, CSS, JavaScript). No build step needed. Open `index.html` in a browser to preview.
 
-## Run locally
-1. Install Node.js 18 or newer.
-2. Open this folder in VS Code.
-3. Open Terminal → New Terminal.
-4. Run `npm install`.
-5. Run `npm run dev`.
-6. Open the local address shown in the terminal (normally http://localhost:5173).
-
-## Build
-Run `npm run build` to create the production site in `dist`.
-
-## Personal details
-Email, LinkedIn, Facebook and Multan location are included in `src/main.jsx`.
+Live site: https://YOUR-USERNAME.github.io/YOUR-REPO/
